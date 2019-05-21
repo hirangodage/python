@@ -1,0 +1,467 @@
+<html><style type="text/css">
+    html, body {
+        height: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    p {
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        font-weight: normal;
+    }
+
+    #silverlightControlHost {
+        height: 100%;
+        text-align: center;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+
+    #WorkFlowDiv {
+        position: absolute; /* RGBa with 0.6 opacity */
+        background-color: rgba(0, 0, 0, 0.8); /* For IE 5.5 - 7*/
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); /* For IE 8*/
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+        overflow: hidden;
+        left: 0;
+        top: 5px;
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+
+    #WorkFlowIFrameContainer {
+        background-color: #ffffff;
+        border-style: none;
+        border-width: 0px;
+        height: 90%;
+        width: 988px;
+        margin-left: 300px;
+        margin-right: auto;
+    }
+
+    #WorkFlowHeader {
+        background-color: #01458f;
+        vertical-align: middle;
+        height: 20px;
+        padding: 10px;
+        width: 970px;
+        margin-left: 300px;
+        margin-right: auto;
+    }
+
+
+    #JobPlanDiv {
+        position: absolute; /* RGBa with 0.6 opacity */
+        background-color: rgba(0, 0, 0, 0.5); /* For IE 5.5 - 7*/
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); /* For IE 8*/
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+        overflow: hidden;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+
+    #JobPlan_IFrame_Container {
+        background-color: #ffffff;
+        border-style: none;
+        border-width: 0px;
+        height: 90%;
+        width: 988px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #printerDiv {
+        position: absolute;
+        left: -9999px;
+    }
+
+    #Jobplan_Header {
+        /*background-image: url(images/headerbg.PNG);
+        background-repeat: repeat-x;*/
+        background-color: #C3C4C1;
+        vertical-align: middle;
+        height: 20px;
+        padding: 10px;
+        width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .popdiv {
+        z-index: 999;
+    }
+
+    .buttonSttyle {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        width: 80px;
+        height: 28px;
+        border: 2px solid #339966;
+        background-color: #00CC66;
+        display: block;
+        color: #FFF;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+        .buttonSttyle:hover {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            width: 80px;
+            height: 28px;
+            border: 2px solid #339966;
+            background-color: #00B058;
+            display: block;
+            color: #FFF;
+            font-size: 14px;
+        }
+    /*Ck Editro Layout Select Text*/
+    .container {
+        width: 100%;
+        margin: 0px;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+    }
+
+    .sidebar1 {
+        float: right;
+        width: 180;
+        border-left: 1px dotted #d3d7d3;
+        height: 450px;
+    }
+
+    .content {
+        padding: 0px;
+        width: 800px;
+        float: Left;
+        height: 420px;
+    }
+
+    .xmlcontent {
+        padding: 0px;
+        width: 800px;
+        float: Left;
+        height: 420px;
+    }
+
+    .printDocContent {
+        padding: 0px;
+        width: 100%;
+        float: Left;
+    }
+
+    .selector {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        width: 180px;
+        height: 400px;
+        border: 0px none;
+        background-color: transparent;
+        overflow: hidden;
+        padding: 3px;
+    }
+
+    .bottomBtns {
+        bottom: 0;
+        display: inline-block;
+        margin-bottom: 10px;
+        position: absolute;
+        right: 10px;
+    }
+
+        .bottomBtns span {
+            float: left;
+            margin-left: 3px;
+        }
+
+    .cke_skin_kama cke_1 cke_editor_ad_content {
+        height: 819px;
+    }
+
+    .nextprvBtns {
+        bottom: 0;
+        display: inline-block;
+        left: 8px;
+        padding-bottom: 10px;
+        position: absolute;
+    }
+
+
+        .nextprvBtns span {
+            float: left;
+            margin-left: 3px;
+        }
+
+    iframe {
+        border: medium none;
+    }
+</style>
+<head><meta http-equiv="X-UA-Compatible" content="IE=edge"></head><body style="height:11.69in;width:8.5in;overflow:hidden;"><div id="divUSCPageContent" style="position:absolute; left: 0px; top: 0px; right:0px; bottom:0px; height: 100%; width: 100%;background-position: 0px 0px;background-repeat:no-repeat;"><div style="position:absolute; left: 79px; top: 110px;overflow:visible;width:auto;height:auto ">&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<table border="0" cellpadding="0" cellspacing="0" width="330">
+<tr>
+    <td>
+    <span style="font-size: 14px; line-height: 14px; font-family: 'Source Sans Pro', sans-serif;">Debtor 113571 </span>
+    </td>
+</tr>
+<tr>
+    <td>
+    <span style="font-size: 14px; line-height: 14px; font-family: 'Source Sans Pro', sans-serif;"> </span>
+    </td>
+</tr>
+<tr>
+    <td>
+    <span style="font-size: 14px; line-height: 14px; font-family: 'Source Sans Pro', sans-serif;">Kling</span>
+    </td>
+</tr>
+<tr>
+    <td>
+    <span style="font-size: 14px; line-height: 14px; font-family: 'Source Sans Pro', sans-serif;">7820 SPILLUM</span>
+    </td>
+</tr>
+</table>
+&nbsp;&nbsp;</div><div style="position:absolute; left: 452px; top: 230px;overflow:visible;width:auto;height:auto "><table style="font-size: 14px; font-family: 'Source Sans Pro', sans-serif;" cellspacing="0" cellpadding="0" border="0" width="300">
+      <tbody>
+        <tr>
+            <td style="color: #555555; font-size: 14px; font-family: 'Source Sans Pro', sans-serif; font-weight: 600;  margin-right: 10px;" align="right">Dato </td>
+            <td style="color: #555555; font-size: 14px; font-family: 'Source Sans Pro', sans-serif;" align="center" width="20"> : </td>
+          <td style="color: #555555; font-size: 14px; font-family: 'Source Sans Pro', sans-serif;" align="right">31.07.2018&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="color: #555555; font-size: 14px; font-family: 'Source Sans Pro', sans-serif; font-weight: 600;" align="right">Foretaksregisteret </td>
+            <td style="color: #555555; font-size: 14px; font-family: 'Source Sans Pro', sans-serif; margin-left: 10px;" align="center" width="20"> : </td>
+          <td style="color: #555555; font-size: 14px; font-family: 'Source Sans Pro', sans-serif;" align="right">MVA 65465465</td>
+        </tr>		  
+        <tr>
+            <td style="color: #555555; font-size: 14px; font-family: 'Source Sans Pro', sans-serif; font-weight: 600;" align="right"></td>
+            <td style="color: #555555; font-size: 14px; font-family: 'Source Sans Pro', sans-serif; margin-left: 10px;" align="center" width="20"></td>
+          <td style="color: #555555; font-size: 14px; font-family: 'Source Sans Pro', sans-serif;" align="right">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>&nbsp;</div><div style="position:absolute; left: 454px; top: 528px;overflow:visible;width:auto;height:auto "><table style="color: #555555; font-size: 12px; font-family: 'Source Sans Pro', sans-serif;" align="left" cellspacing="0" cellpadding="0" border="0" width="310">
+<tbody>
+    <tr>
+        <td><span style="font-size:14px">Hovedstol (spesifisert nedenfor)</span></td>
+        <td align="right" width="100"><span style="font-size:14px">&nbsp;23 420,00</span></td>
+    </tr>
+    <tr>
+        <td><span style="font-size:14px">Forsinkelsesrente fra 14.08.2018</span></td>
+        <td align="right" width="100"><span style="font-size:14px">0,00</span></td>
+    </tr>
+    <tr>
+        <td><span style="font-size:14px">Purregebyr</span></td>
+        <td align="right" width="100"><span style="font-size:14px">0,00</span></td>
+    </tr>
+    <tr>
+        <td>
+        <p><span style="font-size:14px">- Innbetalt</span></p>
+        </td>
+        <td align="right" width="100">
+        <p><span style="font-size:14px">0,00</span></p>
+        </td>
+    </tr>
+</tbody>
+</table></div><div style="position:absolute; left: 458px; top: 326px;overflow:visible;width:auto;height:auto "><table style="color: #000000; background-color: #fff9c4; border: 1px solid #ffd54f;  font-size: 12px;" width="300" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody>
+    <tr>
+        <td height="5">&nbsp;</td>
+    </tr>
+    <tr>
+        <td valign="top">
+        <table style="color: #000; font-size: 14px; font-family: 'Source Sans Pro', sans-serif;" width="300" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <td width="10"></td>
+                    <td style="font-weight: 400; color: #000;" width="100">Sak </td>
+                    <td style="font-weight: 400; color: #000;" align="right" width="20">:</td>
+                    <td style="font-size:18px; font-weight: 600; color: #000;" align="right" width="180">201430</td>
+                    <td width="10">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="10">&nbsp;</td>
+                    <td style="font-weight: 400; color: #000;" width="100">Faktura nr&nbsp;</td>
+                    <td style="font-weight: 400; color: #000;" align="right" width="20">&nbsp;:</td>
+                    <td style="font-size:18px; font-weight: 600; color: #000;" align="right" width="180">32444</td>
+                    <td width="10">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="10">&nbsp;</td>
+                    <td style="font-weight: 400; color: #000;" width="100">Kreditor</td>
+                    <td style="font-weight: 400; color: #000;" align="right" width="20">:</td>
+                    <td style="font-weight: 600; color: #000;" align="right" width="180">Debtor 1247</td>
+                    <td width="10">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="10"></td>
+                    <td style="font-weight: 400; color: #000;" width="100">Forfall</td>
+                    <td style="font-weight: 400; color: #000;" align="right" width="20">:</td>
+                    <td style="font-weight: 600; color: #000;" align="right" width="180">14.08.2018</td>
+                    <td width="10">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="10">&nbsp;</td>
+                    <td style="font-weight: 400; color: #000;">Konto nr.</td>
+                    <td style="font-weight: 400; color: #000;" align="right">:</td>
+                    <td style="font-weight: 600; color: #000;" align="right" width="180">1256 53 11239</td>
+                    <td width="10"></td>
+                </tr>
+                <tr>
+                    <td width="10"></td>
+                    <td style="font-weight: 400; color: #000;" width="100">KID</td>
+                    <td style="font-weight: 400; color: #000;" align="right" width="20">:</td>
+                    <td style="font-weight: 600; color: #000;" align="right" width="180">110020143057235</td>
+                    <td width="10"></td>
+                </tr>
+                <tr>
+                    <td width="10"></td>
+                    <td style="font-weight: 400; color: #000;" width="100">Beløp å betale</td>
+                    <td style="font-weight: 400; color: #000;" align="right" width="20">:</td>
+                    <td style="font-size:16px; font-weight: 600; color: #000;" align="right" width="180">23 420,00</td>
+                    <td width="10">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="5"> &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        </td>
+    </tr>
+</tbody>
+</table></div><div style="position:absolute; left: 72.1249847412109px; top: 333.291649341583px;overflow:visible;width:auto;height:auto "><table cellspacing="0" cellpadding="0" width="640" style="font-size: 16px; font-family: 'Source Sans Pro', sans-serif; font-weight: 600; color:#000000;">
+<tbody>    
+<tr>
+   <td>
+    Inkassovarsel
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+</div><div style="position:absolute; left: 68.5000915527344px; top: 390.166599273682px;overflow:visible;width:auto;height:auto "><table cellspacing="0" cellpadding="0" width="660" style="font-size: 18px; color: #000;">
+<tbody>    
+<tr>
+<td style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px; color: #555;"><p>Debtor 1247 har overdratt oppfølging av sine </p><p>krav i henhold til nedenstående oppstill til Kredeni AS.</p><p><br />Oversittes betalingsfristen gjør vi oppmerksom på </p><p>at saken overføres til inkasso og ytterligere omkostninger </p><p>vil påløpe. <br /><br />Vær vennlig å benytte KID og kontonummer oppgitt i dette </p><p>brevet. Du må betale hele beløp, inklusive gebyr og renter </p><p>som oppgitt. NB! Befriende betaling kan kun skje ved&nbsp;</p><p>betaling til Kredeni AS. <br /><br />Skulle det være uoverenstemmelser med dine </p><p>opplysininger, vær så snill å ta kontakt.<br />&nbsp;</p></td>
+</tr>
+</tbody>
+</table>&nbsp;&nbsp;</div><div style="position:absolute; left: 452px; top: 92px;overflow:visible;width:auto;height:auto "><table style="font-size: 14px; font-family: &#39;Source Sans Pro&#39;, sans-serif" cellspacing="0" cellpadding="0" border="0" width="300">
+<tbody>
+    <tr>
+        <td align="right">
+        <img src="https://www.unicornbox.com/kredenilogo.png" alt="" style="margin-bottom: 8px;" width="158" height="60" />
+        </td>
+    </tr>
+    <tr>
+        <td style="color: #555555; font-size: 14px; font-family: &#39;Source Sans Pro&#39;, sans-serif" align="right">
+        <p style="direction:ltr;line-height:100%;margin-left:40px">Nugegoda, 6566 Nugegoda</p>
+        </td>
+    </tr>
+    <tr>
+        <td style="color: #555555; font-size: 14px; font-family: &#39;Source Sans Pro&#39;, sans-serif" align="right">+94 13356522</td>
+    </tr>
+    <tr>
+        <td style="font-size: 14px; font-family: &#39;Source Sans Pro&#39;, sans-serif" align="right">dumala@unicorn-solutions.com</td>
+    </tr>
+</tbody>
+</table>
+&nbsp;&nbsp;</div><div style="position:absolute; left: 72px; top: 775px;overflow:visible;width:auto;height:auto "><table cellspacing='2' cellpadding='2' style='width:660px' border="0">
+<tr>
+    <td>
+    <table cellspacing='2' cellpadding='2' style='width:660px'>
+        <tr>
+            <td>
+            <table width="325" border="0" cellspacing="0" cellpadding="0" style="background-color: #f2dede; border:1px solid #ebccd1; font-family: 'Source Sans Pro', sans-serif;">
+                <tbody>
+                    <tr>
+                        <td>
+                        <table style="color: #a94442; font-size: 11px;" cellspacing="0" cellpadding="0" border="0" width="280" align="center">
+                            <tbody>
+                                <tr>
+                                    <td height="10">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 14px; font-weight: 600;"> Det lønner seg å løse saken &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Det løper fort på ytterligere kostnader for deg i en inkassosak som denne. Vi anbefaler deg derfor å gjøre ditt beste for å løse saken. Betal innen forfall, eller ta kontakt med oss for å se om vi kan komme frem til en nedbetalingsordning eller lignende.</td>
+                                </tr>
+                                <tr>
+                                    <td height="10">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+            <td valign="top">
+            <table style="background-color: #d9edf7; border:1px solid #bce8f1; padding: 10px; text-align: right;" cellspacing="0" cellpadding="0" border="0" width="335">
+                <tbody>
+                    <tr>
+                        <td valign="top" style="text-align: right">
+                        <table style="font-size: 13px; font-family: 'Source Sans Pro', sans-serif;" cellspacing="0" cellpadding="0" border="0" width="280" align="center">
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" height="5">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="font-size: 14px; font-family: 'Source Sans Pro', sans-serif;">
+                                    Kredeni Portal
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="font-size: 11px; font-family: 'Source Sans Pro', sans-serif;"><a style="color: #0087C3; text-decoration: none;" href="https://unicornbox.com/PortalLogin/Kredeni.html">https://unicornbox.com/PortalLogin/Kredeni.html&nbsp;</a>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" height="5"></td>
+                                </tr>
+                                <tr>
+                                    <td width="125">Brukernavn</td>
+                                    <td width="40">:</td>
+                                    <td align="right"><strong>DT201430</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Passord</td>
+                                    <td>:</td>
+                                    <td align="right"><strong>MUDQXQQ</strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" height="5">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+    </table>
+    </td>
+</tr>
+</table>
+&nbsp;</div></div></div>

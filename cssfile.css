@@ -1,0 +1,215 @@
+ @body {
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+@body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+@p {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+@silverlightControlHost {
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+
+@WorkFlowDiv {
+    position: absolute; /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.8); /* For IE 5.5 - 7*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+    overflow: hidden;
+    left: 0;
+    top: 5px;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+@WorkFlowIFrameContainer {
+    background-color: #ffffff;
+    border-style: none;
+    border-width: 0px;
+    height: 90%;
+    width: 988px;
+    margin-left: 300px;
+    margin-right: auto;
+}
+
+@WorkFlowHeader {
+    background-color: #01458f;
+    vertical-align: middle;
+    height: 20px;
+    padding: 10px;
+    width: 970px;
+    margin-left: 300px;
+    margin-right: auto;
+}
+
+
+#JobPlanDiv {
+    position: absolute; /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.5); /* For IE 5.5 - 7*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+#JobPlan_IFrame_Container {
+    background-color: #ffffff;
+    border-style: none;
+    border-width: 0px;
+    height: 90%;
+    width: 988px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#printerDiv {
+    position: absolute;
+    left: -9999px;
+}
+
+#Jobplan_Header {
+    /*background-image: url(images/headerbg.PNG);
+    background-repeat: repeat-x;*/
+    background-color: #C3C4C1;
+    vertical-align: middle;
+    height: 20px;
+    padding: 10px;
+    width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popdiv {
+    z-index: 999;
+}
+
+.buttonSttyle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    width: 80px;
+    height: 28px;
+    border: 2px solid #339966;
+    background-color: #00CC66;
+    display: block;
+    color: #FFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    .buttonSttyle:hover {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        width: 80px;
+        height: 28px;
+        border: 2px solid #339966;
+        background-color: #00B058;
+        display: block;
+        color: #FFF;
+        font-size: 14px;
+    }
+/*Ck Editro Layout Select Text*/
+.container {
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+@sidebar1 {
+    float: right;
+    width: 180;
+    border-left: 1px dotted #d3d7d3;
+    height: 450px;
+}
+
+@content {
+    padding: 0px;
+    width: 800px;
+    float: Left;
+    height: 420px;
+}
+
+.xmlcontent {
+    padding: 0px;
+    width: 800px;
+    float: Left;
+    height: 420px;
+}
+
+.printDocContent {
+    padding: 0px;
+    width: 100%;
+    float: Left;
+}
+
+.selector {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    width: 180px;
+    height: 400px;
+    border: 0px none;
+    background-color: transparent;
+    overflow: hidden;
+    padding: 3px;
+}
+
+@bottomBtns {
+    bottom: 0;
+    display: inline-block;
+    margin-bottom: 10px;
+    position: absolute;
+    right: 10px;
+}
+
+    .bottomBtns span {
+        float: left;
+        margin-left: 3px;
+    }
+
+.cke_skin_kama cke_1 cke_editor_ad_content {
+    height: 819px;
+}
+
+.nextprvBtns {
+    bottom: 0;
+    display: inline-block;
+    left: 8px;
+    padding-bottom: 10px;
+    position: absolute;
+}
+
+
+    .nextprvBtns span {
+        float: left;
+        margin-left: 3px;
+    }
+
+@iframe {
+    border: medium none;
+}
+@page {
+    prince-shrink-to-fit:auto;
+    margin:0;
+}
